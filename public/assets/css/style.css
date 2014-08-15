@@ -1660,11 +1660,11 @@ main a {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #0099ff;
-  border-bottom: 1px dotted #4db8ff;
+  border-bottom: 1px dotted #1aa3ff;
   cursor: pointer;
   text-decoration: none; }
   main a:hover {
-    color: #4db8ff;
+    color: #1aa3ff;
     border-bottom: 0; }
 
 body {
@@ -1721,10 +1721,13 @@ main.newquestion {
     border-radius: 5px;
     background: #0099ff;
     color: white;
-    transition: 0.35s ease all;
     cursor: pointer;
-    margin-left: -150px; }
+    margin-left: -150px;
+    transition: 0.35s ease all; }
     main.newquestion .askbtn:hover {
-      background: #4db8ff; }
+      background: #1aa3ff; }
+    main.newquestion .askbtn:active, main.newquestion .askbtn.active {
+      transition: 0.05s ease all;
+      background: #66c2ff; }
     main.newquestion .askbtn.visible {
       margin-left: 0; }

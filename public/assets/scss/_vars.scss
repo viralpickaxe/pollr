@@ -5,9 +5,15 @@ $black : #303030;
 $green : #5AB55A;
 $red : #FF4747;
 
-$blue_active : lighten($blue, 15%);
+$blue_active : lighten($blue, 5%);
 $grey_dark : darken($grey, 50%);
+
+$blue_dark : darken($blue, 5%);
+$blue_light : lighten($blue, 15%);
+$blue_vlight : lighten($blue, 20%);
+
 $green_dark : darken($green, 5%);
 $green_light : lighten($green, 15%);
+
 $red_dark : darken($red, 5%);
 $red_light : lighten($red, 15%);

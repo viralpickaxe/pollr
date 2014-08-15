@@ -22,14 +22,15 @@ main {
       border-radius: 5px;
       background: $blue;
       color: $white;
-      transition: 0.35s ease all;
       cursor: pointer;
       margin-left: -150px;
+      transition: 0.35s ease all;
       &:hover {
         background: $blue_active;
       }
-      &:active {
-
+      &:active, &.active {
+        transition: 0.05s ease all;
+        background: $blue_vlight;
       }
       &.visible {
         margin-left: 0;
