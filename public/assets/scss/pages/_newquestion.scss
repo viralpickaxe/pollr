@@ -1,0 +1,39 @@
+main {
+  &.newquestion {
+    position: fixed;
+    bottom: 0;
+    .question {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font-size: 3em;
+      width: 100%;
+      color: $grey_dark;
+      &:focus {
+        outline: 0;
+      }
+    }
+    .askbtn {
+      border: none;
+      outline: none;
+      font-size: 2.6em;
+      margin-top: 0.5em;
+      padding: 0.2em 0.5em;
+      border-radius: 5px;
+      background: $blue;
+      color: $white;
+      transition: 0.35s ease all;
+      cursor: pointer;
+      margin-left: -150px;
+      &:hover {
+        background: $blue_active;
+      }
+      &:active {
+
+      }
+      &.visible {
+        margin-left: 0;
+      }
+    }
+  }
+}
