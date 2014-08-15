@@ -1,0 +1,31 @@
+header {
+  a {
+    @include transition(all, 0.2s, ease-in-out);
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+    &:after{
+      content: " <";
+    }
+    &:hover {
+      border-bottom: 1px dotted $white;
+      &:after{
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+main {
+  a {
+    @include transition(all, 0.2s, ease-in-out);
+    color: $blue;
+    border-bottom: 1px dotted $blue_active;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      color: $blue_active;
+      border-bottom: 0;
+    }
+  }
+}

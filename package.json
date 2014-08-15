@@ -1,0 +1,21 @@
+{
+  "name": "pollr",
+  "version": "1.0.0",
+  "description": "pollr. ask awesomely.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.7.2",
+    "socket.io": "^1.0.6"
+  },
+  "subdomain": "pollr",
+  "domains": [
+    "pollr.iamjamiedavies.com",
+    "www.pollr.iamjamiedavies.com"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

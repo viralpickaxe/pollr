@@ -1,0 +1,13 @@
+$blue : #0099FF;
+$white : #ffffff;
+$grey : #E5E5E5;
+$black : #303030;
+$green : #5AB55A;
+$red : #FF4747;
+
+$blue_active : lighten($blue, 15%);
+$grey_dark : darken($grey, 30%);
+$green_dark : darken($green, 5%);
+$green_light : lighten($green, 15%);
+$red_dark : darken($red, 5%);
+$red_light : lighten($red, 15%);
