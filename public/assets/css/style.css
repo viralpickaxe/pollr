@@ -21,30 +21,30 @@
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .grid:after, .buttons:after, header:after {
+.cf:after, .grid:after, header:after {
   content: "";
   display: table;
   clear: both; }
 
-.grid, .buttons {
+.grid {
   width: 100%; }
 
-ul.grid, ul.buttons {
+ul.grid {
   list-style-type: none; }
 
-[class*='col-'], .col-1, .col-1-1, .col-2-2, .col-3-3, .col-4-4, .col-5-5, .col-6-6, .col-1-2, .col-2-4, .buttons .button-container, .col-3-6, .col-4-8, .col-5-10, .col-6-12, .col-1-3, .col-2-6, .col-3-9, .col-4-12, .col-2-3, .col-4-6, .col-8-12, .col-1-4, .col-2-8, .col-3-12, .col-3-4, .col-9-12, .col-1-5, .col-1-10, .col-2-5, .col-3-5, .col-4-5, .col-1-6, .col-2-12, .col-5-6, .col-1-7, .col-2-7, .col-3-7, .col-4-7, .col-5-7, .col-6-7, .col-1-8, .col-3-8, .col-5-8, .col-6-8, .col-7-8, .col-1-9, .col-2-9, .col-4-9, .col-5-9, .col-6-9, .col-7-9, .col-8-9, .col-3-10, .col-4-10, .col-6-10, .col-7-10, .col-8-10, .col-9-10, .col-1-11, .col-2-11, .col-3-11, .col-4-11, .col-5-11, .col-6-11, .col-7-11, .col-8-11, .col-9-11, .col-10-11, .col-1-12, .col-5-12, .col-7-12, .col-10-12, .col-11-12, .col-1-13, .col-1-14, .col-1-15, .col-1-16, .col-1-17, .col-1-18, .col-1-19, .col-1-20 {
+[class*='col-'], .col-1, .col-1-1, .col-2-2, .col-3-3, .col-4-4, .col-5-5, .col-6-6, .col-1-2, .col-2-4, .col-3-6, .col-4-8, .col-5-10, .col-6-12, .col-1-3, .col-2-6, .col-3-9, .col-4-12, .col-2-3, .col-4-6, .col-8-12, .col-1-4, .col-2-8, .col-3-12, .col-3-4, .col-9-12, .col-1-5, .col-1-10, .col-2-5, .col-3-5, .col-4-5, .col-1-6, .col-2-12, .col-5-6, .col-1-7, .col-2-7, .col-3-7, .col-4-7, .col-5-7, .col-6-7, .col-1-8, .col-3-8, .col-5-8, .col-6-8, .col-7-8, .col-1-9, .col-2-9, .col-4-9, .col-5-9, .col-6-9, .col-7-9, .col-8-9, .col-3-10, .col-4-10, .col-6-10, .col-7-10, .col-8-10, .col-9-10, .col-1-11, .col-2-11, .col-3-11, .col-4-11, .col-5-11, .col-6-11, .col-7-11, .col-8-11, .col-9-11, .col-10-11, .col-1-12, .col-5-12, .col-7-12, .col-10-12, .col-11-12, .col-1-13, .col-1-14, .col-1-15, .col-1-16, .col-1-17, .col-1-18, .col-1-19, .col-1-20 {
   box-sizing: border-box;
   float: left;
   padding: 0;
   min-height: 1px; }
 
-.grid-no-padding [class*='col-'], .grid-no-padding .col-1, .grid-no-padding .col-1-1, .grid-no-padding .col-2-2, .grid-no-padding .col-3-3, .grid-no-padding .col-4-4, .grid-no-padding .col-5-5, .grid-no-padding .col-6-6, .grid-no-padding .col-1-2, .grid-no-padding .col-2-4, .grid-no-padding .buttons .button-container, .buttons .grid-no-padding .button-container, .grid-no-padding .col-3-6, .grid-no-padding .col-4-8, .grid-no-padding .col-5-10, .grid-no-padding .col-6-12, .grid-no-padding .col-1-3, .grid-no-padding .col-2-6, .grid-no-padding .col-3-9, .grid-no-padding .col-4-12, .grid-no-padding .col-2-3, .grid-no-padding .col-4-6, .grid-no-padding .col-8-12, .grid-no-padding .col-1-4, .grid-no-padding .col-2-8, .grid-no-padding .col-3-12, .grid-no-padding .col-3-4, .grid-no-padding .col-9-12, .grid-no-padding .col-1-5, .grid-no-padding .col-1-10, .grid-no-padding .col-2-5, .grid-no-padding .col-3-5, .grid-no-padding .col-4-5, .grid-no-padding .col-1-6, .grid-no-padding .col-2-12, .grid-no-padding .col-5-6, .grid-no-padding .col-1-7, .grid-no-padding .col-2-7, .grid-no-padding .col-3-7, .grid-no-padding .col-4-7, .grid-no-padding .col-5-7, .grid-no-padding .col-6-7, .grid-no-padding .col-1-8, .grid-no-padding .col-3-8, .grid-no-padding .col-5-8, .grid-no-padding .col-6-8, .grid-no-padding .col-7-8, .grid-no-padding .col-1-9, .grid-no-padding .col-2-9, .grid-no-padding .col-4-9, .grid-no-padding .col-5-9, .grid-no-padding .col-6-9, .grid-no-padding .col-7-9, .grid-no-padding .col-8-9, .grid-no-padding .col-3-10, .grid-no-padding .col-4-10, .grid-no-padding .col-6-10, .grid-no-padding .col-7-10, .grid-no-padding .col-8-10, .grid-no-padding .col-9-10, .grid-no-padding .col-1-11, .grid-no-padding .col-2-11, .grid-no-padding .col-3-11, .grid-no-padding .col-4-11, .grid-no-padding .col-5-11, .grid-no-padding .col-6-11, .grid-no-padding .col-7-11, .grid-no-padding .col-8-11, .grid-no-padding .col-9-11, .grid-no-padding .col-10-11, .grid-no-padding .col-1-12, .grid-no-padding .col-5-12, .grid-no-padding .col-7-12, .grid-no-padding .col-10-12, .grid-no-padding .col-11-12, .grid-no-padding .col-1-13, .grid-no-padding .col-1-14, .grid-no-padding .col-1-15, .grid-no-padding .col-1-16, .grid-no-padding .col-1-17, .grid-no-padding .col-1-18, .grid-no-padding .col-1-19, .grid-no-padding .col-1-20 {
+.grid-no-padding [class*='col-'], .grid-no-padding .col-1, .grid-no-padding .col-1-1, .grid-no-padding .col-2-2, .grid-no-padding .col-3-3, .grid-no-padding .col-4-4, .grid-no-padding .col-5-5, .grid-no-padding .col-6-6, .grid-no-padding .col-1-2, .grid-no-padding .col-2-4, .grid-no-padding .col-3-6, .grid-no-padding .col-4-8, .grid-no-padding .col-5-10, .grid-no-padding .col-6-12, .grid-no-padding .col-1-3, .grid-no-padding .col-2-6, .grid-no-padding .col-3-9, .grid-no-padding .col-4-12, .grid-no-padding .col-2-3, .grid-no-padding .col-4-6, .grid-no-padding .col-8-12, .grid-no-padding .col-1-4, .grid-no-padding .col-2-8, .grid-no-padding .col-3-12, .grid-no-padding .col-3-4, .grid-no-padding .col-9-12, .grid-no-padding .col-1-5, .grid-no-padding .col-1-10, .grid-no-padding .col-2-5, .grid-no-padding .col-3-5, .grid-no-padding .col-4-5, .grid-no-padding .col-1-6, .grid-no-padding .col-2-12, .grid-no-padding .col-5-6, .grid-no-padding .col-1-7, .grid-no-padding .col-2-7, .grid-no-padding .col-3-7, .grid-no-padding .col-4-7, .grid-no-padding .col-5-7, .grid-no-padding .col-6-7, .grid-no-padding .col-1-8, .grid-no-padding .col-3-8, .grid-no-padding .col-5-8, .grid-no-padding .col-6-8, .grid-no-padding .col-7-8, .grid-no-padding .col-1-9, .grid-no-padding .col-2-9, .grid-no-padding .col-4-9, .grid-no-padding .col-5-9, .grid-no-padding .col-6-9, .grid-no-padding .col-7-9, .grid-no-padding .col-8-9, .grid-no-padding .col-3-10, .grid-no-padding .col-4-10, .grid-no-padding .col-6-10, .grid-no-padding .col-7-10, .grid-no-padding .col-8-10, .grid-no-padding .col-9-10, .grid-no-padding .col-1-11, .grid-no-padding .col-2-11, .grid-no-padding .col-3-11, .grid-no-padding .col-4-11, .grid-no-padding .col-5-11, .grid-no-padding .col-6-11, .grid-no-padding .col-7-11, .grid-no-padding .col-8-11, .grid-no-padding .col-9-11, .grid-no-padding .col-10-11, .grid-no-padding .col-1-12, .grid-no-padding .col-5-12, .grid-no-padding .col-7-12, .grid-no-padding .col-10-12, .grid-no-padding .col-11-12, .grid-no-padding .col-1-13, .grid-no-padding .col-1-14, .grid-no-padding .col-1-15, .grid-no-padding .col-1-16, .grid-no-padding .col-1-17, .grid-no-padding .col-1-18, .grid-no-padding .col-1-19, .grid-no-padding .col-1-20 {
   padding: 0; }
 
 .col-1, .col-1-1, .col-2-2, .col-3-3, .col-4-4, .col-5-5, .col-6-6 {
   width: 100%; }
 
-.col-1-2, .col-2-4, .buttons .button-container, .col-3-6, .col-4-8, .col-5-10, .col-6-12 {
+.col-1-2, .col-2-4, .col-3-6, .col-4-8, .col-5-10, .col-6-12 {
   width: 50%; }
 
 .col-1-3, .col-2-6, .col-3-9, .col-4-12 {
@@ -263,72 +263,37 @@ body {
 
 header {
   width: 100%;
+  position: fixed;
+  float: left;
   background-color: #0099ff;
   color: white;
-  padding: 6%;
-  padding-top: 1.5em;
-  padding-bottom: 0.5em;
-  font-size: 1.5em;
-  position: fixed;
   z-index: 100;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
-  header ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    float: left; }
-  header span {
-    float: right;
-    padding-top: 1em;
-    cursor: pointer; }
-  header .question-string {
-    outline: 0;
-    border: 0; }
-  header.newquestionheader {
+  header.newquestion {
     height: 50%; }
+    header.newquestion span {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 1.5em; }
 
 main {
-  width: 88%;
-  margin: 0 auto;
-  padding: 0;
-  padding-top: 6.3em;
-  font-size: 1.2em; }
-
-.buttons {
-  margin-top: 10px; }
-  .buttons .button-container button {
-    height: 200px;
-    width: 96%;
-    border-radius: 5px;
-    border: 0;
-    outline: 0;
-    font-size: 5em;
-    color: white;
-    cursor: pointer;
-    -webkit-transition: background-color 100ms ease-in-out;
-    -moz-transition: background-color 100ms ease-in-out;
-    -o-transition: background-color 100ms ease-in-out;
-    transition: background-color 100ms ease-in-out; }
-    .buttons .button-container button.yes-btn {
-      background-color: #5ab55a;
-      margin-right: 2%; }
-      .buttons .button-container button.yes-btn:hover {
-        background-color: #4ca94c; }
-      .buttons .button-container button.yes-btn:active, .buttons .button-container button.yes-btn.clicked {
-        background-color: #8fcd8f; }
-    .buttons .button-container button.no-btn {
-      background-color: #ff4747;
-      margin-left: 2%; }
-      .buttons .button-container button.no-btn:hover {
-        background-color: #ff2d2d; }
-      .buttons .button-container button.no-btn:active, .buttons .button-container button.no-btn.clicked {
-        background-color: #ff9393; }
-  .buttons .button-container .count {
-    text-align: center;
-    font-size: 3em; }
-    .buttons .button-container .count.yes-count {
-      color: #5ab55a; }
-    .buttons .button-container .count.no-count {
-      color: #ff4747; }
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 1em; }
+  main.newquestion {
+    position: fixed;
+    bottom: 0; }
+    main.newquestion .question {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font-size: 3em;
+      width: 100%; }
+      main.newquestion .question:focus {
+        outline: 0; }

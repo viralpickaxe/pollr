@@ -9,96 +9,43 @@ body {
 header {
   @extend .cf;
   width: 100%;
+  position: fixed;
+  float: left;
   background-color: $blue;
   color: $white;
-  padding: 6%;
-  padding-top: 1.5em;
-  padding-bottom: 0.5em;
-  font-size: 1.5em;
-  position: fixed;
   z-index: 100;
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    float: left;
-  }
-  span {
-    float: right;
-    padding-top: 1em;
-    cursor: pointer;
-  }
-  .question-string {
-    outline: 0;
-    border: 0;
-  }
-
-  &.pollheader {
-
-  }
-  &.newquestionheader {
+  &.newquestion {
     height: 50%;
+    span {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 1.5em;
+    }
   }
 }
 
 main {
-  width: 88%;
-  margin: 0 auto;
-  padding: 0;
-  padding-top: 6.3em;
-  font-size: 1.2em;
-}
-
-.buttons {
-  @extend .grid;
-  margin-top: 10px;
-  .button-container {
-    @extend .col-2-4;
-    button {
-      height: 200px;
-      width: 96%;
-      border-radius: 5px;
+  width: 100%;
+  height: 50%;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  padding: 1em;
+  &.newquestion {
+    position: fixed;
+    bottom: 0;
+    .question {
       border: 0;
       outline: 0;
-      font-size: 5em;
-      color: $white;
-      cursor: pointer;
-      -webkit-transition:background-color 100ms ease-in-out;
-      -moz-transition:background-color 100ms ease-in-out;
-      -o-transition:background-color 100ms ease-in-out;
-      transition:background-color 100ms ease-in-out;
-      &.yes-btn {
-        background-color: $green;
-        margin-right: 2%;
-        &:hover {
-          background-color: $green_dark;
-        }
-        &:active,&.clicked {
-          background-color: $green_light;
-        }
-      }
-      &.no-btn {
-        background-color: $red;
-        margin-left: 2%;
-        &:hover {
-          background-color: $red_dark;
-        }
-        &:active,&.clicked {
-          background-color: $red_light;
-        }
-      }
-    }
-    .count {
-      text-align: center;
+      background: transparent;
       font-size: 3em;
-      &.yes-count {
-        color: $green;
-      }
-      &.no-count {
-        color: $red;
+      width: 100%;
+      &:focus {
+        outline: 0;
       }
     }
   }
