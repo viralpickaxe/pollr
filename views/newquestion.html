@@ -9,7 +9,10 @@
       <span>pollr. <strong>ask awesomely.</strong></span>
     </header>
     <main class="newquestion">
-      <input id="question" name="question" class="question" type="text" placeholder="Should I make this thing?" />
+      <form id="newquestionform" method="GET" action="" onsubmit="return false;">
+        <input id="question" class="question" type="text" placeholder="Should I make this thing?" />
+        <button id="askbtn" class="askbtn" type="submit">Ask</button>
+      </form>
     </main>
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>

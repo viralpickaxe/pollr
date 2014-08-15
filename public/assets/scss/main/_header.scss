@@ -1,0 +1,21 @@
+header {
+  @extend .cf;
+  width: 100%;
+  position: fixed;
+  float: left;
+  background-color: $blue;
+  color: $white;
+  z-index: 100;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  &.newquestion {
+    height: 50%;
+    span {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 1.5em;
+    }
+  }
+}
