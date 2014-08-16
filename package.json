@@ -7,7 +7,6 @@
     "express": "^4.7.2",
     "socket.io": "^1.0.6"
   },
-  "subdomain": "pollr-app",
   "domains": [
     "pollr.iamjamiedavies.com",
     "www.pollr.iamjamiedavies.com"
