@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "description": "pollr. ask awesomely.",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.7.2",
     "socket.io": "^1.0.6"
