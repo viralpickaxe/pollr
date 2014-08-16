@@ -1,0 +1,63 @@
+main {
+  &.poll {
+    width: 88%;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 6.3em;
+    font-size: 1.2em;
+    &.hidden {
+      display: none;
+    }
+    .buttons {
+      @extend .grid;
+      margin-top: 10px;
+      .button-container {
+        @extend .col-2-4;
+        button {
+          height: 200px;
+          width: 96%;
+          border-radius: 5px;
+          border: 0;
+          outline: 0;
+          font-size: 5em;
+          color: $white;
+          cursor: pointer;
+          -webkit-transition:background-color 100ms ease-in-out;
+          -moz-transition:background-color 100ms ease-in-out;
+          -o-transition:background-color 100ms ease-in-out;
+          transition:background-color 100ms ease-in-out;
+          &.yes-btn {
+            background-color: $green;
+            margin-right: 2%;
+            &:hover {
+              background-color: $green_dark;
+            }
+            &:active,&.clicked {
+              background-color: $green_light;
+            }
+          }
+          &.no-btn {
+            background-color: $red;
+            margin-left: 2%;
+            &:hover {
+              background-color: $red_dark;
+            }
+            &:active,&.clicked {
+              background-color: $red_light;
+            }
+          }
+        }
+        .count {
+          text-align: center;
+          font-size: 3em;
+          &.yes-count {
+            color: $green;
+          }
+          &.no-count {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}

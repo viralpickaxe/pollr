@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pollr</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="poll">
+      <ul>
+        <li>pollr</li>
+        <li><strong class="question-string">-</strong></li>
+      </ul>
+    </header>
+    <main class="poll hidden">
+      <div class="buttons">
+        <div class="button-container">
+          <button class="yes-btn" data-value="1">Yes</button>
+          <div class="count yes-count">-</div>
+        </div>
+        <div class="button-container">
+          <button class="no-btn" data-value="-1">No</button>
+          <div class="count no-count">-</div>
+        </div>
+      </div>
+    </main>
+    <main class="poll loading">
+      Loading Question...
+    </main>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/poll.script.js"></script>
+  </body>
+</html>

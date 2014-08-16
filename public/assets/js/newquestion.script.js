@@ -9,18 +9,16 @@ $('#newquestionform').on('submit',function(){
   $askbtn = $('.askbtn',$(this));
   
   if(!$askbtn.attr('disabled')){
-    console.log('submitted');
     $askbtn.attr('disabled',true).addClass('active');
     $question.attr('disabled',true);
     setTimeout(function(){
-      socket.emit('question:create:req',{name:$question.val()});
-      socket.on('question:create:res',function(data){
+      $.get("/create/" + encodeURIComponent($question.val()), function( data ) {
         if(data.created){
           window.location.href = '/' + data.questiondata.url;
         } else {
           $askbtn.attr('disabled',false).removeClass('active');
-          $question.attr('disabled',false);
-          console.log('error');
+          $question.attr('disabled',false).focus();
+          console.log(data.msg);
         }
       });
     },100);

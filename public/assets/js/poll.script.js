@@ -1,22 +1,27 @@
 var socket = io();
 
 $(document).ready(function(){
-  window.App = {
-    yes: 0,
-    no: 0
-  }
+  window.Question = {}
 
-  socket.emit('ping',{});
+  window.questionstring = window.location.pathname.substring(1);
+  $('.question-string').html(questionstring.replace('-',' '));
+
+  socket.emit('ping',{questionurl:questionstring});
   socket.on('pong',function(data){
-    $('.question-string').html(data.questionstring);
-    App.yes = data.yes;
-    App.no = data.no;
-    updateCounters();
-    console.log('pong!');
+    if(data===false){
+      window.location.href = '/';
+    } else {
+      Question = data;
+      $('.question-string').html(Question.name);
+      updateCounters();
+      $('main.loading').hide();
+      $('main.hidden').show();
+    }
   });
+
   socket.on('voteRelay',function(data){
-    App.yes = data.questiondata.yes;
-    App.no = data.questiondata.no;
+    Question.results.yes = data.questiondata.results.yes;
+    Question.results.no = data.questiondata.results.no;
     updateCounters();
     if(data.votedata==1){
       makeGlow($('.yes-btn'));
@@ -24,32 +29,17 @@ $(document).ready(function(){
       makeGlow($('.no-btn'));
     }
   });
-  socket.on('questionUpdateRelay',function(data){
-    $('.question-string').html(data.value);
-  });
 });
 
 $('.buttons').on('click','.yes-btn,.no-btn',function(){
   var $this = $(this);
-  socket.emit('voteCreate',{value:parseInt($this.attr('data-value'))});
+  socket.emit('voteCreate',{question:questionstring,value:parseInt($this.attr('data-value'))});
   makeGlow($this);
 });
 
-$('.question-string').on('click',function(){
-  var $this = $(this);
-  $this.attr('contenteditable','true');
-});
-
-$('.question-string').on('keydown',function(){
-  var $this = $(this);
-  setTimeout(function(){
-    socket.emit('questionUpdateCreate',{value:$this.html()});
-  },0);
-});
-
 function updateCounters(){
-  $('.yes-count').html(App.yes);
-  $('.no-count').html(App.no);
+  $('.yes-count').html(Question.results.yes);
+  $('.no-count').html(Question.results.no);
 }
 
 function makeGlow(thisel){
@@ -59,16 +49,3 @@ function makeGlow(thisel){
     $this.removeClass('clicked');
   },200);
 }
-
-function keydown_function(e) {
-  var evtobj = window.event? event : e,
-  cmdkey = evtobj.ctrlKey || evtobj.metaKey;
-  if($('.question-string').attr('contenteditable')=='true'){
-    if(evtobj.keyCode == 13){
-      $('.question-string').blur();
-    }
-  }
-  return true;
-}
-
-document.onkeydown = keydown_function;
