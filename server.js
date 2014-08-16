@@ -7,7 +7,7 @@ var port = Number(process.env.PORT || 3000)
 
 var app = express();
 var server = http.Server(app);
-var io = socket(server);
+var io = socket(server).listen(server);
 
 var Questions = {};
 

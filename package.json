@@ -1,6 +1,7 @@
 {
   "name": "pollr",
   "version": "1.0.1",
+  "private": true,
   "description": "pollr. ask awesomely.",
   "main": "index.js",
   "dependencies": {
@@ -16,5 +17,5 @@
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
 }
