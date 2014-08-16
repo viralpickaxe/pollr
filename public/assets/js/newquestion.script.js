@@ -22,6 +22,13 @@ $('#newquestionform').on('submit',function(){
         }
       });
     },200);
+  } else {
+    if($question.val()==''){
+      notification_show('Asking a question first might help ;)','error');
+    } else {
+      notification_show("Hold on! I'm already doing something",'error');
+    }
+    $question.focus();
   }
 });
 

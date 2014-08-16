@@ -51,3 +51,11 @@ function makeGlow(thisel){
     $this.removeClass('clicked');
   },200);
 }
+
+setInterval(function(){
+  var check = socket.emit('check up',{});
+  if(check.disconnected){
+    notification_show("I seem to of lost connection :'(",'error',999999);
+    clearInterval();
+  }
+},2000);

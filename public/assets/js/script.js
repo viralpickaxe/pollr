@@ -1,22 +1,18 @@
-function notification_show(notification,type,callback){
-  var callback = callback || function(){};
+function notification_show(notification,type,time){
+  var time = time || 3000;
   var $notif = $('.notification');
 
   $notif.html(notification);
-  $notif.addClass(type).show('slide',{direction:'up'},function(){
-    callback();
-  });
+  $notif.removeClass('success error').addClass(type).show('slide',{direction:'up'});
   setTimeout(function(){
     notification_hide();
-  },3000);
+  },time);
 }
 
-function notification_hide(callback){
-  var callback = callback || function(){};
+function notification_hide(){
   var $notif = $('.notification');
 
   $notif.hide('slide',{direction:'up'},function(){
-    $notif.html('');
-    callback();
+    $notif.html('').removeClass('success error');
   });
 }
