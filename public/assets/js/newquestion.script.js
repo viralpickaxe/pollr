@@ -21,7 +21,7 @@ $('#newquestionform').on('submit',function(){
           console.log(data.msg);
         }
       });
-    },100);
+    },200);
   }
 });
 

@@ -1,17 +1,25 @@
 header {
-  a {
+  li > a {
     @include transition(all, 0.2s, ease-in-out);
     color: $white;
     cursor: pointer;
     text-decoration: none;
-    &:after{
-      content: " <";
-    }
     &:hover {
       border-bottom: 1px dotted $white;
-      &:after{
-        font-weight: 600;
-      }
+    }
+  }
+  .askaquestion {
+    @include transition(all, 0.2s, ease-in-out);
+    background-color: $blue_active;
+    padding: 0.2em 0.5em;
+    float: right;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      background-color: $blue_light;
     }
   }
 }

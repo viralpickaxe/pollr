@@ -1637,7 +1637,7 @@ ul.grid, main.poll ul.buttons {
   display: table;
   clear: both; }
 
-header a {
+header li > a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1646,12 +1646,24 @@ header a {
   color: white;
   cursor: pointer;
   text-decoration: none; }
-  header a:after {
-    content: " <"; }
-  header a:hover {
+  header li > a:hover {
     border-bottom: 1px dotted white; }
-    header a:hover:after {
-      font-weight: 600; }
+header .askaquestion {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #1aa3ff;
+  padding: 0.2em 0.5em;
+  float: right;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white; }
+  header .askaquestion:hover {
+    background-color: #4db8ff; }
 
 main a {
   -webkit-transition: all 0.2s ease-in-out;
@@ -1731,6 +1743,11 @@ main.newquestion {
     main.newquestion .question:focus {
       outline: 0; }
   main.newquestion .askbtn {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
     border: none;
     outline: none;
     font-size: 2.6em;
@@ -1740,12 +1757,15 @@ main.newquestion {
     background: #0099ff;
     color: white;
     cursor: pointer;
-    margin-left: -150px;
-    transition: 0.35s ease all; }
+    margin-left: -150px; }
     main.newquestion .askbtn:hover {
       background: #1aa3ff; }
     main.newquestion .askbtn:active, main.newquestion .askbtn.active {
-      transition: 0.05s ease all;
+      -webkit-transition: all 0.05s ease-in-out;
+      -moz-transition: all 0.05s ease-in-out;
+      -ms-transition: all 0.05s ease-in-out;
+      -o-transition: all 0.05s ease-in-out;
+      transition: all 0.05s ease-in-out;
       background: #66c2ff; }
     main.newquestion .askbtn.visible {
       margin-left: 0; }
@@ -1794,3 +1814,6 @@ main.poll {
         color: #5ab55a; }
       main.poll .buttons .button-container .count.no-count {
         color: #ff4747; }
+main.loading {
+  font-size: 2.5em;
+  text-align: center; }

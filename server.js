@@ -43,21 +43,19 @@ app.get('/:pollurl', function(req, res){
   res.sendfile('./views/poll.html');
 
   var pollurl = req.params.pollurl;
-
-  io.on('connection', function(socket){
-    socket.on('ping', function(data){
-      var question = Questions[data.questionurl];
-      if(typeof(question)!='undefined'){
-        socket.currentQuestion = data.questionurl;
-        socket.emit('pong',question);
-      } else {
-        socket.emit('pong',false);
-      }
-    });
-  });
 });
 
 io.on('connection', function(socket){
+  console.log('connection');
+  socket.on('ping', function(data){
+    var question = Questions[data.questionurl];
+    if(typeof(question)!='undefined'){
+      socket.currentQuestion = data.questionurl;
+      socket.emit('pong',question);
+    } else {
+      socket.emit('pong',false);
+    }
+  });
   socket.on('voteCreate', function(data){
     console.log('Recieved vote: ' + data.value);
     if(typeof(Questions[data.question])!='undefined'){
@@ -68,6 +66,9 @@ io.on('connection', function(socket){
       }
       io.emit('voteRelay',{questiondata:Questions[data.question],votedata:data.value});
     }
+  });
+  socket.on('disconnect', function(){
+    console.log('disconnection');
   });
 });
 

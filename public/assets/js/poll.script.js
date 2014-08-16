@@ -14,8 +14,10 @@ $(document).ready(function(){
       Question = data;
       $('.question-string').html(Question.name);
       updateCounters();
-      $('main.loading').hide();
-      $('main.hidden').show();
+      setTimeout(function(){
+        $('main.loading').hide();
+        $('main.hidden').show();
+      },500);
     }
   });
 

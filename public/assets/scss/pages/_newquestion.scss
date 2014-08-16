@@ -14,6 +14,7 @@ main {
       }
     }
     .askbtn {
+      @include transition(all, 0.35s, ease-in-out);
       border: none;
       outline: none;
       font-size: 2.6em;
@@ -24,12 +25,11 @@ main {
       color: $white;
       cursor: pointer;
       margin-left: -150px;
-      transition: 0.35s ease all;
       &:hover {
         background: $blue_active;
       }
       &:active, &.active {
-        transition: 0.05s ease all;
+        @include transition(all, 0.05s, ease-in-out);
         background: $blue_vlight;
       }
       &.visible {
