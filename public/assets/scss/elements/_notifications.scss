@@ -1,0 +1,18 @@
+.notification {
+  z-index: 100;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 0.2em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  display: none;
+  &.success {
+    background: $green;
+  }
+  &.error {
+    background: $red;
+  }
+}

@@ -18,7 +18,7 @@ $('#newquestionform').on('submit',function(){
         } else {
           $askbtn.attr('disabled',false).removeClass('active');
           $question.attr('disabled',false).focus();
-          console.log(data.msg);
+          notification_show(data.msg,'error');
         }
       });
     },200);
