@@ -6,6 +6,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.7.2",
+    "mongojs": "^0.13.1",
     "socket.io": "^1.0.6"
   },
   "domains": [
