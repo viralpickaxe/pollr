@@ -1,0 +1,21 @@
+footer {
+  @extend .cf;
+  float: left;
+  background-color: $black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1.5em;
+  width: 100%;
+  margin: 0;
+  color: $white;
+  padding: 0.3em 1em;
+  a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid $white;
+    &:hover {
+      border-bottom: 0;
+    }
+  }
+}

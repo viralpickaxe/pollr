@@ -1632,7 +1632,7 @@ ul.grid, main.poll ul.buttons {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .grid:after, main.poll .buttons:after, header:after {
+.cf:after, .grid:after, main.poll .buttons:after, header:after, footer:after {
   content: "";
   display: table;
   clear: both; }
@@ -1738,6 +1738,24 @@ header {
     header.poll .question-string {
       outline: 0;
       border: 0; }
+
+footer {
+  float: left;
+  background-color: #303030;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1.5em;
+  width: 100%;
+  margin: 0;
+  color: white;
+  padding: 0.3em 1em; }
+  footer a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white; }
+    footer a:hover {
+      border-bottom: 0; }
 
 main {
   width: 100%;
