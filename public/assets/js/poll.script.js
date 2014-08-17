@@ -12,7 +12,7 @@ $(document).ready(function(){
       window.location.href = '/';
     } else {
       Question = data;
-      $('.question-string').html(Question.name);
+      $('.question-string').text(Question.name);
       updateCounters();
       setTimeout(function(){
         $('main.loading').hide();
